@@ -693,7 +693,7 @@ function get_xs(api, noteId, a1) {
     let data = undefined
     if(noteId !== ''){
         data = {
-            source_note_id: data
+            source_note_id: noteId
         }
     }
     window.document.cookie = "a1=" + a1 + ';'
