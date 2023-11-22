@@ -23,9 +23,16 @@ def GetFeed(cookie, noteId):
     api = f'/api/sns/web/v1/feed'
     url = f'{BASEURL}{api}'
     data = {
-        "source_note_id": noteId
+        "source_note_id": noteId,
+        "extra": {
+            "need_body_topic": "1"
+        },
+        "image_scenes": [
+            "CRD_PRV_WEBP",
+            "CRD_WM_WEBP"
+        ]
     }
-    encrypt = GetXs(cookie, api, noteId)
+    encrypt = GetXs(cookie, api, data)
     header = GetHeaders(cookie, encrypt)
     resp = session.post(url=url, headers=header, data=json.dumps(data, separators=(',', ':')))
     return json.loads(resp.text)
