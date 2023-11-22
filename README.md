@@ -8,7 +8,7 @@
 
 # 使用方法
 1. 打开要爬取的博主的主页，记录浏览器地址中的最后一串字符串，该字符串为`userId`
-2. 打开开发者工具获得请求头中的Cookie 将其复制到cookie.txt中
+2. 打开开发者工具获得请求头中的`Cookie` 将其复制到`cookie.txt`中
 3. 将`userId`填入`main.py`的`parse_opt()`中
 4. 运行`main.py`
 
